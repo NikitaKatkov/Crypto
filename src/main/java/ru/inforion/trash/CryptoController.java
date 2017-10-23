@@ -20,7 +20,7 @@ public class CryptoController {
                 System.out.println(cryptoModel.revert());
             } else if (input.length() == 3 && input.charAt(1) == ' ') {
                 System.out.println(String.format("Замена %s на %s", input.charAt(0), input.charAt(2)));
-                System.out.println(cryptoModel.decrypt(input.charAt(0), input.charAt(2)));
+                System.out.println(cryptoModel.decrypt(input.charAt(0), input.toUpperCase().charAt(2)));
             } else if (input.equals("stop")) {
                 System.out.println(cryptoModel.stop());
                 System.exit(0);
